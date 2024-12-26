@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="sudoku.css" />
+    <!-- <script src="suduko.js"></script> -->
+    <title>Document</title>
+</head>
+<body>
+    <div id="successMessage" style="display:none;text-align: center;color: green; font-weight: bold;margin-bottom:10px;font-size:27px;font-family:Roboto">
+            Congratulations! Sudoku solved successfully!
+        </div>
+    <div class="full-sudoku-container">
+    <div class="container-div1">
+        <div class = "suduko-headlines">
+            <h2 class="suduko-heading">SUDOKU</h2>
+            <select style="width:100%" class="choose-difficulty" id="chooseDifficulty">
+                <option style="width:100%" class="option-class" value="Easy">Easy</option>
+                <option style="width:100%" class="option-class" value="Medium">Medium</option>
+                <option style="width:100%" class="option-class"value="Hard">Hard</option>
+            </select>
+            <button class="tips-rules" id="showTipsAndRules">
+                <p>Tips/Rules</p>
+            </button>
+            <button class="submit-answer" id="submitSudoku">
+                Submit
+            </button>
+            <button class="try-another" id="tryAnotherPuzzle">
+                Try Another Puzzle
+            </button>
+            <button class="show-answer" id="showAnswerForPuzzle">
+                Show Answer
+            </button>
+        </div>
+    </div>
+    <div class="container-div2">
+        <h1 style="color:white;font-family:Roboto">Sudoku</h1>
+        <p class="difficulty-level">Difficulty:<span class="difficulty-value" id = "difficultyLevel"></span></p>
+        <h2 class="error-count" id="errorCount">!Please Fill All The Blocks</h2>
+        <div class="sudoku-box" id="sudokuBox">
+
+        </div>
+        <div class="number-box" id="numberBox">
+
+        </div>
+    </div>
+    <div class="container-div2 tips-rules-container" style="display: none;" id="tipsRulesContainer">
+        <h2 style="text-align: center;color:white;font-family:Roboto">Rules/Tips for solving sudoku</h2>
+        <h3 class="rule-heading">
+            Basic Rules:
+        </h3>
+        <ol>
+            <li>Objective: Fill a 9x9 grid so that every row, every column, and each of the nine 3x3 sub-grids (also called boxes, blocks, or regions) contain the digits 1 through 9.</li>
+            <li>Uniqueness: Each number must appear exactly once in each row, column, and 3x3 sub-grid.</li>
+            <li>No Repetition: Numbers cannot be repeated within any row, column, or 3x3 sub-grid.</li>
+        </ol>
+        <h3 class="rule-heading">
+            Starting Point:
+        </h3>
+        <ol>
+            <li>The puzzle starts with some numbers already filled in (called "givens"). These cannot be changed.</li>
+        </ol>
+        <h3 class="rule-heading">
+            Rules for Solving:
+        </h3>
+        <ol>
+            <li>Click on the numbers below the Sudoku puzzle to activate them (the selected number will have a white background). Then, click on the empty cell in the Sudoku puzzle where you want to insert the selected number.</li>
+            <li>Analyze the grid to identify possible numbers for each empty cell based on the givens and the rules.</li>
+            <li>Use logic and elimination to narrow down options—guessing is not required in a standard Sudoku puzzle.</li>
+            <li>Continue filling in numbers until the entire grid is complete and all rules are satisfied.</li>
+        </ol>
+    </div>
+    <div class="container-div2" id="sudokuAnswerDiv">
+        <h1>Sudoku Answer</h1>
+        <div class="sudoku-box" id="sudokuBoxAnswer">
+
+        </div>
+        <div class="number-box" id="numberBoxAnser">
+
+        </div>
+    </div>
+
+    <script src="sudoku.js"></script>
+    </div>
+</body>
+</html>
