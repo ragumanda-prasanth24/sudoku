@@ -490,17 +490,17 @@ function levelChange() {
     var chooseDifficultyElem = document.getElementById("chooseDifficulty");
     var elemVal1 = chooseDifficultyElem.value;
     if (elemVal1=="Easy") {
-        var level = getRandomIntForLevel(20,33)
+        var level = getRandomIntForLevel(20,40)
 
         getAnotherPuzzle(level)
     }
     else if (elemVal1=="Medium") {
-        var level = getRandomIntForLevel(31,43)
+        var level = getRandomIntForLevel(35,45)
 
         getAnotherPuzzle(level)
     }
     else if (elemVal1=="Hard") {
-        var level = getRandomIntForLevel(40,55)
+        var level = getRandomIntForLevel(45,65)
 
         getAnotherPuzzle(level)
     }
