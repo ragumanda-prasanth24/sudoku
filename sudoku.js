@@ -481,7 +481,7 @@ function getAnotherPuzzle(level) {
             var id=i+"*"+j
             var elem=document.getElementById(id)
             elem.innerText=sudoku_for_answer[i][j]
-        }
+        } 
     }
 
 }
